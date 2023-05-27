@@ -7,7 +7,7 @@
 	// Placeholders with the same ids are connected.
 	// Example:
 	"Print to console": {
-		"scope": "javascript,typescript",
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
 		"prefix": "lg",
 		"body": [
 			"console.log($1);",
@@ -16,12 +16,43 @@
 		"description": "Log output to console"
 	},
 	"JSON Stringifiy": {
-		"scope": "javascript,typescript",
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
 		"prefix": "js",
 		"body": [
-			"console.log(JSON.Stringifiy($1, null, 2))",
-			"$2"
+			"console.log(JSON.stringify($1, null, 2))"
 		],
-		"description": "Log output to console"
-	}
+		"description": "Stringify and console log"
+	},
+  "for loop": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "4l",
+		"body": [
+			"for (let i = 0; i < $1.length; i++)$2"
+		],
+		"description": "for loop"
+	},
+	"map function": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "mp",
+		"body": [
+			"$1.map(($2,i,a)=> $3)"
+		],
+		"description": "map all params"
+	},
+	"filter": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "ft",
+		"body": [
+			"$1.filter(($2) => $3)"
+		],
+		"description": "filter element"
+	},
+	"reduce": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "rd",
+		"body": [
+			"$1.reduce((a,c)=> $2a + c)"
+		],
+		"description": "reduce by adding"
+	},
 }
